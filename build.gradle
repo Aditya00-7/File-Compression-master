@@ -3,6 +3,24 @@ apply plugin: 'eclipse'
 apply plugin: 'application'
 
 mainClassName = "prog.Main"
+gradle wrapper
+sudo apt install gradle  # Linux
+brew install gradle      # macOS
+choco install gradle     # Windows (via Chocolatey)
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.apache.commons:commons-io:2.11.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.2'
+}
 
 //this will help to create the fatjar
 //if you dont need fatjar just remove this block
